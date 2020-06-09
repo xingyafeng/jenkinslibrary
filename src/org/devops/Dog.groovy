@@ -3,7 +3,8 @@ package org.devops
 class Dog {
 
     def name
-    def tools toemail
+    def tools
+    def toemail
 
     Dog() {
 
@@ -31,9 +32,10 @@ class Dog {
     }
 
     def init(){
-        tools.PrintMes("dog init ...","green")
         tools = new tools()
         toemail = new toemail()
+        
+        tools.PrintMes("dog init ...","green")
     }
 
     static void main(String[] args) {
