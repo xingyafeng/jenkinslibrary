@@ -12,7 +12,6 @@ class Dog {
 
     Dog(name) {
         this.name = name
-        tools.PrintMes("new Dog ","green")
     }
 
     def getName() {
