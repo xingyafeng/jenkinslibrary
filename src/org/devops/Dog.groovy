@@ -19,7 +19,7 @@ class Dog {
         this.name = name
     }
 
-    def run(tt) {
+    def run(def tt) {
         println(name + " is running ...")
         setName(tt)
     }
