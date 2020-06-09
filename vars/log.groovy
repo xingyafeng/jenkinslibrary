@@ -6,3 +6,8 @@ def info(message) {
 def warning(message) {
     echo "WARNING: ${message}"
 }
+
+def cmd(messages) {
+
+    sh "echo $messages"
+}

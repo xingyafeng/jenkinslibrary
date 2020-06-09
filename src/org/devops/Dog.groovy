@@ -23,10 +23,6 @@ class Dog {
 
     def run() {
         setName("小小鸟")
-
-        sh """
-            echo $name
-        """
     }
 
     static void main(String[] args) {
