@@ -2,7 +2,8 @@ package org.devops
 
 class Dog {
 
-    def name;
+    def name
+    def tools toemail
 
     Dog() {
 
@@ -10,22 +11,29 @@ class Dog {
 
     Dog(name) {
         this.name = name
-        println("name = " + name)
+        tools.PrintMes("new Dog ","green")
     }
 
     def getName() {
+        tools.PrintMes("get name $name","green")
         return name
     }
 
     void setName(name) {
         this.name = name
+        tools.PrintMes("set name $name","green")
     }
 
     def run() {
         setName("小小鸟")
 
-        def tools = new tools()
         tools.PrintMes("测试 库之前的调用关系","green")
+    }
+
+    def init(){
+        tools.PrintMes("dog init ...","green")
+        tools = new tools()
+        toemail = new toemail()
     }
 
     static void main(String[] args) {
