@@ -19,17 +19,17 @@ class Dog {
         this.name = name
     }
 
-    def run(def tt) {
+    def run() {
         println(name + " is running ...")
-        setName(tt)
+        setName("小小鸟")
     }
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
 
         Dog d = new Dog()
         d.setName("dahuang")
         println(d.getName())
-
-        d.run("ddd")
+        d.run()
+        println(d.getName())
     }
 }
