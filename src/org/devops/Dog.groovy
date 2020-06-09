@@ -23,6 +23,9 @@ class Dog {
 
     def run() {
         setName("小小鸟")
+
+        def tools = new org.devops.tools()
+        tools.PrintMes("测试 库之前的调用关系","green")
     }
 
     static void main(String[] args) {
