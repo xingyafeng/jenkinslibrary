@@ -20,7 +20,9 @@ class Dog {
     }
 
     def run() {
-        println(name + " is running ...")
+        ansiColor('xterm') {
+            println(name + " is running ...")
+        }
         setName("小小鸟")
     }
 
