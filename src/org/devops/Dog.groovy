@@ -19,10 +19,9 @@ class Dog {
         this.name = name
     }
 
-    def run() {
+    def run(tt) {
         println(name + " is running ...")
-
-        println("the " + name + " is go ...")
+        setName(tt)
     }
 
     public static void main(String[] args) {
@@ -31,6 +30,6 @@ class Dog {
         d.setName("dahuang")
         println(d.getName())
 
-        d.run()
+        d.run("ddd")
     }
 }
