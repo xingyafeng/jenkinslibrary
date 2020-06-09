@@ -31,10 +31,10 @@ class Dog {
         tools.PrintMes("测试 库之前的调用关系","green")
     }
 
-    def init(){
+    def init() {
         tools = new tools()
         toemail = new toemail()
-        
+
         tools.PrintMes("dog init ...","green")
     }
 
