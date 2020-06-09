@@ -1,5 +1,3 @@
-package org.devops
-
 class Dog {
 
     def name;
@@ -10,6 +8,7 @@ class Dog {
 
     Dog(name) {
         this.name = name
+        println("name = " + name)
     }
 
     def getName() {
@@ -21,8 +20,9 @@ class Dog {
     }
 
     def run() {
+        println(name + " is running ...")
 
-        println(this.name + " is running ...")
+        println("the " + name + " is go ...")
     }
 
     public static void main(String[] args) {
