@@ -50,15 +50,11 @@ def env() {
     env.add("JENKINS_URL")
 
     env.each {
-        e -> println(e)
+        e -> sh "println(e)"
     }
 
     env.each {
-        e -> sh "echo ${e}"
-    }
-
-    env.each {
-        e -> log.v(e + ${e})
+        e -> sh "echo \${e}"
     }
 }
 
