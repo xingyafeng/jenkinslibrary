@@ -4,10 +4,10 @@
 
 """
 
-def print() {
+def env() {
 
-    log.v("print ...")
-    
+    log.v("print env ...")
+
 //    def env = []
 //
 //    """分支名"""
