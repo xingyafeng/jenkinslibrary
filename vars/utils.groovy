@@ -4,7 +4,7 @@
 
 """
 
-def env() {
+def __env() {
 
     log.v("print env ...")
 
