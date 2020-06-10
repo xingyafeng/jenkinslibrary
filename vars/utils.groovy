@@ -6,73 +6,73 @@
 
 def __env() {
 
-    log.v("print __env ...")
+    log.v("print __env list ...")
 
-    def env = []
+    def envlist = []
 
     """分支名"""
-    env.add("BRANCH_NAME")
+    envlist.add("BRANCH_NAME")
 
     """分支信息"""
-    env.add("CHANGE_ID")
-    env.add("CHANGE_URL")
-    env.add("CHANGE_TITLE")
-    env.add("CHANGE_AUTHOR")
-    env.add("CHANGE_AUTHOR_DISPLAY_NAME")
-    env.add("CHANGE_AUTHOR_EMAIL")
-    env.add("CHANGE_TARGET")
-    env.add("CHANGE_BRANCH")
-    env.add("CHANGE_FORK")
+    envlist.add("CHANGE_ID")
+    envlist.add("CHANGE_URL")
+    envlist.add("CHANGE_TITLE")
+    envlist.add("CHANGE_AUTHOR")
+    envlist.add("CHANGE_AUTHOR_DISPLAY_NAME")
+    envlist.add("CHANGE_AUTHOR_EMAIL")
+    envlist.add("CHANGE_TARGET")
+    envlist.add("CHANGE_BRANCH")
+    envlist.add("CHANGE_FORK")
 
     """TAG信息"""
-    env.add("TAG_NAME")
-    env.add("TAG_TIMESTAMP")
-    env.add("TAG_UNIXTIME")
-    env.add("TAG_DATE")
+    envlist.add("TAG_NAME")
+    envlist.add("TAG_TIMESTAMP")
+    envlist.add("TAG_UNIXTIME")
+    envlist.add("TAG_DATE")
 
     """BUILD信息"""
-    env.add("BUILD_ID")
-    env.add("BUILD_URL")
-    env.add("BUILD_NUMBER")
-    env.add("BUILD_DISPLAY_NAME")
+    envlist.add("BUILD_ID")
+    envlist.add("BUILD_URL")
+    envlist.add("BUILD_NUMBER")
+    envlist.add("BUILD_DISPLAY_NAME")
 
     """JOB信息"""
-    env.add("JOB_URL")
-    env.add("JOB_NAME")
-    env.add("JOB_BASE_NAME")
-    env.add("EXECUTOR_NUMBER")
+    envlist.add("JOB_URL")
+    envlist.add("JOB_NAME")
+    envlist.add("JOB_BASE_NAME")
+    envlist.add("EXECUTOR_NUMBER")
 
     """NODE信息"""
-    env.add("NODE_NAME")
-    env.add("NODE_LABELS")
-    env.add("WORKSPACE")
-    env.add("JENKINS_HOME")
-    env.add("JENKINS_URL")
+    envlist.add("NODE_NAME")
+    envlist.add("NODE_LABELS")
+    envlist.add("WORKSPACE")
+    envlist.add("JENKINS_HOME")
+    envlist.add("JENKINS_URL")
 
-    stage ('Example') {
-        steps {
-            script {
-                log.info 'Starting'
-                log.warning 'Nothing to do!'
+//    stage ('Example') {
+//        steps {
+//            script {
+//                log.info 'Starting'
+//                log.warning 'Nothing to do!'
+//
+//                echo "CHANGE_ID:  ${envlist.CHANGE_ID}"
+//            }
+//        }
+//    }
 
-                echo "CHANGE_ID:  ${env.CHANGE_ID}"
-            }
-        }
-    }
-
-    env.each {
+    envlist.each {
         e -> println(e)
     }
 
-    env.each {
-        e -> sh "echo ${evn.${e}}"
-    }
+//    envlist.each {
+//        e -> sh "echo ${envlist.${e}}"
+//    }
 
 
 
 
 //
-//    env.each {
+//    envlist.each {
 //        e -> sh "echo \${e}"
 //    }
 }
