@@ -49,20 +49,22 @@ def env() {
     env.add("JENKINS_HOME")
     env.add("JENKINS_URL")
 
-    stage ('Example') {
-        steps {
-            script {
-                log.info 'Starting'
-                log.warning 'Nothing to do!'
-
-                println("CHANGE_ID:" + ${env.CHANGE_ID})
-            }
-        }
+    env.each {
+        e -> println(e)
     }
 
-//    env.each {
-//        e -> println(e)
+//    stage ('Example') {
+//        steps {
+//            script {
+//                log.info 'Starting'
+//                log.warning 'Nothing to do!'
+//
+//                println("CHANGE_ID:" + ${env.CHANGE_ID})
+//            }
+//        }
 //    }
+
+
 //
 //    env.each {
 //        e -> sh "echo \${e}"
