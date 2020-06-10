@@ -49,16 +49,16 @@ def __env() {
     envlist.add("JENKINS_HOME")
     envlist.add("JENKINS_URL")
 
-//    stage ('Example') {
-//        steps {
-//            script {
-//                log.info 'Starting'
-//                log.warning 'Nothing to do!'
-//
-//                echo "CHANGE_ID:  ${envlist.CHANGE_ID}"
-//            }
-//        }
-//    }
+    stage ('Example') {
+        steps {
+            script {
+                log.info 'Starting'
+                log.warning 'Nothing to do!'
+
+                echo "CHANGE_ID:  ${envlist.CHANGE_ID}"
+            }
+        }
+    }
 
     envlist.each {
         e -> println(e)
@@ -75,6 +75,8 @@ def __env() {
 //    envlist.each {
 //        e -> sh "echo \${e}"
 //    }
+
+    log.v("print __env list end ...")
 }
 
 def print_currentBuild() {
