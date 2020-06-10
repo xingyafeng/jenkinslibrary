@@ -93,4 +93,5 @@ def cmd(messages) {
     sh "echo $messages"
     sh "pwd"
     sh "ls -ltr"
+    sh "`dirname ${0}`/script/zzzzz-script/demo.sh"
 }
