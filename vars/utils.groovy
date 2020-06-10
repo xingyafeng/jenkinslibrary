@@ -54,7 +54,7 @@ def env() {
     }
 
     env.each {
-        e -> sh "echo ${$e}"
+        e -> sh "echo ${evn.${e}}"
     }
 
 //    stage ('Example') {
