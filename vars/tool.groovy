@@ -54,7 +54,11 @@ def env() {
     }
 
     env.each {
-        e -> echo ${e}
+        e -> sh "echo ${e}"
+    }
+
+    env.each {
+        e -> log.v(e + ${e})
     }
 }
 
