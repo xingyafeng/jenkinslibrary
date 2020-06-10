@@ -53,6 +53,10 @@ def env() {
         e -> println(e)
     }
 
+    env.each {
+        e -> sh "echo \${e}"
+    }
+
 //    stage ('Example') {
 //        steps {
 //            script {
