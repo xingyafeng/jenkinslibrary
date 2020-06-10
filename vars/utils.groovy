@@ -4,70 +4,48 @@
 
 """
 
-def __env() {
+def print_env() {
 
-    log.v("print __env list ...")
-    log.v("CHANGE_ID:  ${env.CHANGE_ID}")
-    echo  "CHANGE_ID:  ${env.JOB_NAME}"
-
-    def envlist = []
+    log.i("------------------ print env")
 
     """分支名"""
-    envlist.add("BRANCH_NAME")
+    log.i("BRANCH_NAME:  ${env.BRANCH_NAME}")
 
     """分支信息"""
-    envlist.add("CHANGE_ID")
-    envlist.add("CHANGE_URL")
-    envlist.add("CHANGE_TITLE")
-    envlist.add("CHANGE_AUTHOR")
-    envlist.add("CHANGE_AUTHOR_DISPLAY_NAME")
-    envlist.add("CHANGE_AUTHOR_EMAIL")
-    envlist.add("CHANGE_TARGET")
-    envlist.add("CHANGE_BRANCH")
-    envlist.add("CHANGE_FORK")
+    log.i("CHANGE_ID:  ${env.CHANGE_ID}")
+    log.i("CHANGE_URL:  ${env.CHANGE_URL}")
+    log.i("CHANGE_FORK:  ${env.CHANGE_FORK}")
+    log.i("CHANGE_TITLE:  ${env.CHANGE_TITLE}")
+    log.i("CHANGE_AUTHOR:  ${env.CHANGE_AUTHOR}")
+    log.i("CHANGE_TARGET:  ${env.CHANGE_TARGET}")
+    log.i("CHANGE_BRANCH:  ${env.CHANGE_BRANCH}")
+    log.i("CHANGE_AUTHOR_EMAIL:  ${env.CHANGE_AUTHOR_EMAIL}")
+    log.i("CHANGE_AUTHOR_DISPLAY_NAME:  ${env.CHANGE_AUTHOR_DISPLAY_NAME}")
 
     """TAG信息"""
-    envlist.add("TAG_NAME")
-    envlist.add("TAG_TIMESTAMP")
-    envlist.add("TAG_UNIXTIME")
-    envlist.add("TAG_DATE")
+    log.i("TAG_NAME:  ${env.TAG_NAME}")
+    log.i("TAG_DATE:  ${env.TAG_DATE}")
+    log.i("TAG_UNIXTIME:  ${env.TAG_UNIXTIME}")
+    log.i("TAG_TIMESTAMP:  ${env.TAG_TIMESTAMP}")
 
     """BUILD信息"""
-    envlist.add("BUILD_ID")
-    envlist.add("BUILD_URL")
-    envlist.add("BUILD_NUMBER")
-    envlist.add("BUILD_DISPLAY_NAME")
+    log.i("BUILD_ID:  ${env.BUILD_ID}")
+    log.i("BUILD_URL:  ${env.BUILD_URL}")
+    log.i("BUILD_NUMBER:  ${env.BUILD_NUMBER}")
+    log.i("BUILD_DISPLAY_NAME:  ${env.BUILD_DISPLAY_NAME}")
 
     """JOB信息"""
-    envlist.add("JOB_URL")
-    envlist.add("JOB_NAME")
-    envlist.add("JOB_BASE_NAME")
-    envlist.add("EXECUTOR_NUMBER")
+    log.i("JOB_URL:  ${env.JOB_URL}")
+    log.i("JOB_NAME:  ${env.JOB_NAME}")
+    log.i("JOB_BASE_NAME:  ${env.JOB_BASE_NAME}")
+    log.i("EXECUTOR_NUMBER:  ${env.EXECUTOR_NUMBER}")
 
     """NODE信息"""
-    envlist.add("NODE_NAME")
-    envlist.add("NODE_LABELS")
-    envlist.add("WORKSPACE")
-    envlist.add("JENKINS_HOME")
-    envlist.add("JENKINS_URL")
-
-    envlist.each {
-        e -> println(e)
-    }
-
-//    envlist.each {
-//        e -> sh "echo ${envlist.${e}}"
-//    }
-
-
-
-
-//
-//    envlist.each {
-//        e -> sh "echo \${e}"
-//    }
-
-    log.v("print __env list end ...")
+    log.i("NODE_NAME:  ${env.NODE_NAME}")
+    log.i("NODE_LABELS:  ${env.NODE_LABELS}")
+    log.i("WORKSPACE:  ${env.WORKSPACE}")
+    log.i("JENKINS_HOME:  ${env.JENKINS_HOME}")
+    log.i("JENKINS_URL:  ${env.JENKINS_URL}")
 }
 
 def print_currentBuild() {
