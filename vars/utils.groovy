@@ -7,6 +7,7 @@
 def __env() {
 
     log.v("print __env list ...")
+    echo "CHANGE_ID:  ${envlist.CHANGE_ID}"
 
     def envlist = []
 
@@ -48,17 +49,6 @@ def __env() {
     envlist.add("WORKSPACE")
     envlist.add("JENKINS_HOME")
     envlist.add("JENKINS_URL")
-
-    stage ('Example') {
-        steps {
-            script {
-                log.info 'Starting'
-                log.warning 'Nothing to do!'
-
-                echo "CHANGE_ID:  ${envlist.CHANGE_ID}"
-            }
-        }
-    }
 
     envlist.each {
         e -> println(e)
