@@ -8,8 +8,6 @@ def env() {
 
     log.v("print env ...")
 
-    println("CHANGE_ID:" + ${env.CHANGE_ID})
-
     def env = []
 
     """分支名"""
@@ -51,13 +49,24 @@ def env() {
     env.add("JENKINS_HOME")
     env.add("JENKINS_URL")
 
-    env.each {
-        e -> println(e)
+    stage ('Example') {
+        steps {
+            script {
+                log.info 'Starting'
+                log.warning 'Nothing to do!'
+
+                println("CHANGE_ID:" + ${env.CHANGE_ID})
+            }
+        }
     }
 
-    env.each {
-        e -> sh "echo \${e}"
-    }
+//    env.each {
+//        e -> println(e)
+//    }
+//
+//    env.each {
+//        e -> sh "echo \${e}"
+//    }
 }
 
 def print_currentBuild() {
