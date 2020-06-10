@@ -8,7 +8,6 @@ def env() {
 
     log.v("print env ...")
 
-    println("CHANGE_ID:" + CHANGE_ID)
     println("CHANGE_ID:" + ${env.CHANGE_ID})
 
     def env = []
