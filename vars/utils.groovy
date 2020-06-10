@@ -8,7 +8,7 @@ def __env() {
 
     log.v("print __env list ...")
     log.v("CHANGE_ID:  ${env.CHANGE_ID}")
-    echo  "CHANGE_ID:  ${env.CHANGE_ID}"
+    echo  "CHANGE_ID:  ${env.JOB_NAME}"
 
     def envlist = []
 
