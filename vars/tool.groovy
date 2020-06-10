@@ -8,6 +8,9 @@ def env() {
 
     log.v("print env ...")
 
+    println("CHANGE_ID:" + CHANGE_ID)
+    println("CHANGE_ID:" + ${env.CHANGE_ID})
+
     def env = []
 
     """分支名"""
@@ -50,7 +53,7 @@ def env() {
     env.add("JENKINS_URL")
 
     env.each {
-        e -> sh "println(e)"
+        e -> println(e)
     }
 
     env.each {
