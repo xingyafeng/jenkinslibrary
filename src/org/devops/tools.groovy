@@ -88,3 +88,9 @@ def e(messages) {
         assert messages == "messages"
     }
 }
+
+def cmd(messages) {
+    sh "echo $messages"
+    sh "pwd"
+    sh "ls -ltr"
+}

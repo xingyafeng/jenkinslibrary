@@ -6,12 +6,21 @@ class Dog {
     def tools
     def toemail
 
+    def log
+    def utils
+
     Dog() {
 
     }
 
     Dog(name) {
         this.name = name
+    }
+
+    Dog(name, log, utils) {
+        this.name = name
+        this.log = log
+        this.utils = utils
     }
 
     def getName() {
@@ -35,6 +44,8 @@ class Dog {
         toemail = new toemail()
 
         tools.PrintMes("dog init ...","green")
+        tools.i("dog init ...")
+        log.i("dog init ...")
     }
 
     static void main(String[] args) {
