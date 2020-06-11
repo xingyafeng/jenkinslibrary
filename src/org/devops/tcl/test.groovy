@@ -1,6 +1,6 @@
 package org.devops.tcl
 
-class test {
+class test implements Callback {
 
     def log
     def utils
@@ -14,4 +14,10 @@ class test {
         log.v("test init ...")
         utils.print_env()
     }
+
+    @Override
+    void go() {
+        log.i("hello go go go ....")
+    }
 }
+
